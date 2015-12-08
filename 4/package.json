@@ -1,0 +1,17 @@
+{
+  "name": "advent4",
+  "version": "1.0.0",
+  "description": "Advent 4",
+  "main": "4.1.js",
+  "dependencies": {
+    "md5": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha -t 10000"
+  },
+  "author": "Sean Heffernan",
+  "license": "ISC"
+}
