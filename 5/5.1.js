@@ -1,19 +1,22 @@
-const vowels = [ 'a', 'e', 'i', 'o', 'u' ];
-const badStrings = [ 'ab', 'cd', 'pq', 'xy' ];
+'use strict';
+
+// Define any constants we need
+const VOWELS = [ 'a', 'e', 'i', 'o', 'u' ];
+const BAD_STRINGS = [ 'ab', 'cd', 'pq', 'xy' ];
 
 module.exports = {
 
   containsThreeVowels: function(input) {
-    var count = 0;
-    for (var i=0; i<input.length; i++) {
-      if (vowels.indexOf(input[i]) > -1) { count += 1; }
+    let count = 0;
+    for (let i=0; i<input.length; i++) {
+      if (VOWELS.indexOf(input[i]) > -1) { count += 1; }
     }
     return count >= 3;
   },
 
   containsDoubleLetter: function(input) {
-    var lastLetter = '';
-    for (var i=0; i<input.length; i++) {
+    let lastLetter = '';
+    for (let i=0; i<input.length; i++) {
       if (input[i] === lastLetter) { return true; }
       lastLetter = input[i];
     }
@@ -21,8 +24,8 @@ module.exports = {
   },
 
   doesNotContainStrings: function(input) {
-    for (var i=0; i<badStrings.length; i++) {
-      if (input.indexOf(badStrings[i]) > -1) { return false; }
+    for (let i=0; i<BAD_STRINGS.length; i++) {
+      if (input.indexOf(BAD_STRINGS[i]) > -1) { return false; }
     }
     return true;
   },
